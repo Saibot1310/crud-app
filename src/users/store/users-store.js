@@ -6,7 +6,7 @@ const state = {
 };
 
 const loadNextPage = async () => {
-  const users = await loadUsersByPage(state.currentPage = 1);
+  const users = await loadUsersByPage(state.currentPage + 1);
   
   if (users.length === 0) return;
 
