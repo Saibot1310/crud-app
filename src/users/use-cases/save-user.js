@@ -4,7 +4,7 @@ import { User } from "../models/user";
  * 
  * @param {Like<User>} userLike 
  */
-const saveUser = async (userLike) => {
+export const saveUser = async (userLike) => {
 
   const user = new User(userLike);
 
@@ -32,7 +32,8 @@ const createUser = async (user) => {
   });
 
   const newUser = await response.json();
-
+  console.log(newUser);
+  
   return newUser;
 
 }
